@@ -23,7 +23,7 @@ const seguro10 = new Seguro("honda", 2800000, 5600)
 const seguros = [seguro1, seguro2, seguro3, seguro4, seguro5, seguro6, seguro7, seguro8, seguro9, seguro10]
 
 function seguroPremium(seguro){
-    return seguro *= 1.75
+    return seguro *= 1.65
 }
 
 const obtenerInfoMarca = (x) => {
