@@ -61,5 +61,5 @@ do{
 const boton = document.getElementById("boton")
 
 boton.addEventListener('click', () => {
-    console.log("Tengo que mejorar esto para que modifique el texto en el html (prox entrega)")
+    console.log("Tengo que mejorar esto para que modifique el texto en el html")
 })
