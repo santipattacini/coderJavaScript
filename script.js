@@ -1,3 +1,4 @@
+
 class Seguro {
     constructor(marca, cotizacion, valor){
         this.marca = marca
@@ -30,22 +31,21 @@ const obtenerInfoMarca = (x) => {
     return x.map(elemento => elemento.obtenerInfo() ).join("\n")
 }
 
+const parrafo1 = document.getElementById("parrafo1")
+const marcaV = document.getElementById("marcaV")
+
+const infoMarcas = obtenerInfoMarca(seguros)
+const arrayMarcas = seguros.map(seguro => seguro.marca)
+
+
 do{
     let cotizar = prompt("¿Desea cotizar el seguro de su vehiculo? (SI / NO)").toLowerCase()
     if(cotizar == "si"){
-        let infoMarcas = obtenerInfoMarca(seguros)
         let marca = prompt("Ingrese la marca de su vehículo: \n" + infoMarcas).toLowerCase()
         if(seguros.some(seguros => seguros.marca == marca) == true){
-            let arrayMarcas = seguros.map(seguro => seguro.marca)
-            let indice = arrayMarcas.indexOf(marca)
-            alert(`La marca ${marca} está cotizada en ${seguros[indice].cotizacion} y el seguro básico tiene un valor de ${seguros[indice].valor}`)
-            premium = prompt("Si desea cotizar su vehiculo con el seguro premium ingrese 'P'. De lo contrario no ingrese nada.").toLowerCase()
-            if (premium == "p"){
-                alert(`El seguro premium de la marca ${marca} tiene un valor de ${seguroPremium(seguros[indice].valor)}`)
-                seguros[indice].valor = seguroPremium(seguros[indice].valor)
-            }
-            alert("Abra la consola para ver la cotización. Gracias por elegirnos!")
-            console.log(seguros[indice])
+            const indice = arrayMarcas.indexOf(marca)
+            marcaV.innerText += `${marca}`
+            parrafo1.innerText = `La marca ${marca} está cotizada en ${seguros[indice].cotizacion} y el seguro básico tiene un valor de ${seguros[indice].valor}`
         } else {
             alert(`No cotizamos seguros para la marca ${marca}`)
         }
@@ -58,3 +58,8 @@ do{
     }  
 } while(repetir == "si")
 
+const boton = document.getElementById("boton")
+
+boton.addEventListener('click', () => {
+    console.log("Tengo que mejorar esto para que modifique el texto en el html (prox entrega)")
+})
