@@ -1,0 +1,21 @@
+body{
+    background-color: white;
+    color: black;
+    transition: 1s ease;
+}
+
+.darkMode{
+    background-color: black;
+    color: white;
+}
+
+div{
+    margin: 1rem;
+}
+.inputMarca input{
+    width: 16rem;
+}
+
+.colorRed{
+    color: red;
+}

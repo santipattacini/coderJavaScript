@@ -1,3 +1,26 @@
+// modo claro y modo oscuro de la pagina
+let darkMode
+
+if(localStorage.getItem("darkMode")){
+    darkMode = localStorage.getItem("darkMode") // consulto el local storage
+} else {
+    localStorage.setItem("darkMode", "light") // creo
+}
+if (darkMode == "dark"){
+    document.body.classList.add("darkMode")
+}
+
+const botonDarkMode = document.getElementById("botonDarkMode")
+const botonLightMode = document.getElementById("botonLightMode")
+
+botonDarkMode.addEventListener("click", () => {
+    document.body.classList.add("darkMode")
+    localStorage.setItem("darkMode", "dark")
+})
+botonLightMode.addEventListener("click", () => {
+    document.body.classList.remove("darkMode")
+    localStorage.setItem("darkMode", "light")
+})
 
 class Seguro {
     constructor(marca, cotizacion, valor){
@@ -5,63 +28,38 @@ class Seguro {
         this.cotizacion = cotizacion
         this.valor = valor
     }
-    obtenerInfo(){
-        return `- ${this.marca}`
-    }
 }
 
+// creo algunos objetos con los valores y un array con esos objetos
 const seguro1 = new Seguro("chevrolet", 2000000, 4000)
 const seguro2 = new Seguro("ford", 2400000, 4800)
 const seguro3 = new Seguro("peugeot", 3000000, 6000)
-const seguro4 = new Seguro("fiat", 1800000, 3600)
-const seguro5 = new Seguro("renault", 1500000, 3000)
-const seguro6 = new Seguro("nissan", 5000000, 10000)
-const seguro7 = new Seguro("volkswagen", 4200000, 8400)
-const seguro8 = new Seguro("bmw", 7000000, 14000)
-const seguro9 = new Seguro("toyota", 3500000, 7000)
-const seguro10 = new Seguro("honda", 2800000, 5600)
+const seguro4 = new Seguro("renault", 1800000, 3600)
+const seguro5 = new Seguro("volkswagen", 1500000, 3000)
 
-const seguros = [seguro1, seguro2, seguro3, seguro4, seguro5, seguro6, seguro7, seguro8, seguro9, seguro10]
+const seguros = [seguro1, seguro2, seguro3, seguro4, seguro5]
+const segurosMarcas = seguros.map(seguro => seguro.marca)
 
-function seguroPremium(seguro){
-    return seguro *= 1.65
-}
-
-const obtenerInfoMarca = (x) => {
-    return x.map(elemento => elemento.obtenerInfo() ).join("\n")
-}
-
-const parrafo1 = document.getElementById("parrafo1")
-const marcaV = document.getElementById("marcaV")
-
-const infoMarcas = obtenerInfoMarca(seguros)
-const arrayMarcas = seguros.map(seguro => seguro.marca)
-
-
-
-// saco este do y hago el prompt en forma de boton
-do{
-    let cotizar = prompt("¿Desea cotizar el seguro de su vehiculo? (SI / NO)").toLowerCase()
-    if(cotizar == "si"){
-        let marca = prompt("Ingrese la marca de su vehículo: \n" + infoMarcas).toLowerCase()
-        if(seguros.some(seguros => seguros.marca == marca) == true){
-            const indice = arrayMarcas.indexOf(marca)
-            marcaV.innerText += `${marca}`
-            parrafo1.innerText = `La marca ${marca} está cotizada en ${seguros[indice].cotizacion} y el seguro básico tiene un valor de ${seguros[indice].valor}`
-        } else {
-            alert(`No cotizamos seguros para la marca ${marca}`)
-        }
-    } else if (cotizar == "no"){
-        alert("Muchas gracias por visitar nuestra página. Esperamos verte pronto!")
-        break
+// consulto por el valor que el usuario ingreso en el input
+const form = document.getElementById("marcaForm")
+const cotizacion = document.getElementById("cotizacion")
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const marca = document.getElementById("idMarca").value
+    if (seguros.some(seguros => seguros.marca == marca) == true){
+        const indice = segurosMarcas.indexOf(marca)
+        cotizacion.classList.remove("colorRed")
+        cotizacion.innerText = `La marca ${marca} está cotizada en $${seguros[indice].cotizacion} y el seguro tiene un valor de $${seguros[indice].valor}`
     } else {
-        alert("Por favor ingrese una respuesta válida (SI / NO)")
-        var repetir = "si"
-    }  
-} while(repetir == "si")
+        cotizacion.innerText = `No cotizamos seguros para la marca ${marca}`
+        cotizacion.classList.add("colorRed")
+    }
+})
 
-const boton = document.getElementById("boton")
-
-boton.addEventListener('click', () => {
-    console.log("Tengo que mejorar esto para que modifique el texto en el html")
+const marcasCotizadas = document.getElementById("marcasCotizadas")
+marcasCotizadas.addEventListener("click", () => {
+    listado.innerText = ""
+    segurosMarcas.forEach((elemento) => {
+        listado.innerText += `- ${elemento} \n`
+    })
 })
