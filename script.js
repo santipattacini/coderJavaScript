@@ -56,6 +56,7 @@ form.addEventListener("submit", (e) => {
     }
 })
 
+// listado de marcas disponibles para asegurar
 const marcasCotizadas = document.getElementById("marcasCotizadas")
 marcasCotizadas.addEventListener("click", () => {
     listado.innerText = ""
