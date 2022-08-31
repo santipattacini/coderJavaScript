@@ -38,6 +38,8 @@ const infoMarcas = obtenerInfoMarca(seguros)
 const arrayMarcas = seguros.map(seguro => seguro.marca)
 
 
+
+// saco este do y hago el prompt en forma de boton
 do{
     let cotizar = prompt("¿Desea cotizar el seguro de su vehiculo? (SI / NO)").toLowerCase()
     if(cotizar == "si"){
