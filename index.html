@@ -9,7 +9,7 @@
     <title>Pre-entrega 2</title>
 </head>
 <body>
-    <h1 style="text-align: center">Bienvenidos a la compañía de seguros!</h1>
+    <h1 style="text-align: center">SEGUROS PATTACINI S.R.L.</h1>
     <div class="botonesModos">
         <button id="botonLightMode" class="btn btn-light">Modo claro</button>
         <button id="botonDarkMode" class="btn btn-dark">Modo oscuro</button>
@@ -17,19 +17,24 @@
     <div class="inputMarca">
         <h2>Para cotizar el seguro de tu vehículo escribe la marca y presiona el botón.</h2>
         <form id="marcaForm">
+            <!-- reemplazamos el input por una lista desplegable -->
+            <select name="marcas" id="formSelect">
+                <option selected>Seleccioná la marca de tu vehículo</option>
+            </select>
+            <!--  
             <div>
                 <label for="idMarca">Ingrese la marca de su vehículo:</label>
                 <input type="text" name="marca" id="idMarca" required>
             </div>
+            -->
             <button type="submit" class="btn btn-primary">Cotizar</button>
         </form>
     </div>
     <div>
-        <h3>Si queres conocer las marcas que cotizamos dale click a "Marcas"</h3>
-        <button id="marcasCotizadas" class="btn btn-primary">Marcas</button>
-        <h3 id="listado"></h3>
         <h3 id="cotizacion"></h3>
     </div>
     <script src="script.js"></script>
+    <!-- alert 2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
