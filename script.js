@@ -58,6 +58,7 @@ for(var i = 0; i < segurosMarcas.length; i++){
     select.appendChild(list) 
 } 
 
+// cotozador
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     const marca = document.getElementById("formSelect").value
