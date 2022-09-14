@@ -46,6 +46,7 @@ segurosMarcas.sort()
 const form = document.getElementById("marcaForm")
 const select = document.getElementById("formSelect")
 const cotizacion = document.getElementById("cotizacion")
+const divDolar = document.getElementById("divDolar")
 
 console.log(segurosMarcas)
 
@@ -58,13 +59,23 @@ for(var i = 0; i < segurosMarcas.length; i++){
     select.appendChild(list) 
 } 
 
+// API valor dolar actual
+fetch('https://criptoya.com/api/dolar')
+.then(dolar => dolar.json())
+.then(({oficial, blue}) => {
+    dolarOficial = oficial
+    dolarBlue = blue
+})
+
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     const marca = document.getElementById("formSelect").value
     if (seguros.some(seguros => seguros.marca == marca) == true){
         const indice = segurosMarcas.indexOf(marca)
         cotizacion.classList.remove("colorRed")
-        cotizacion.innerText = `La marca ${marca} está cotizada en $${seguros[indice].cotizacion} y el seguro tiene un valor de $${seguros[indice].valor}`
+        cotizacion.innerText = `La marca ${marca} está cotizada en $${seguros[indice].cotizacion} y el precio del seguro es de $${seguros[indice].valor}`
+        let precioUSD = ((seguros[indice].valor)/(dolarOficial*1.65)).toFixed(2)
+        divDolar.innerText = `Precio del seguro en dólares (oficial + impuestos): USD ${precioUSD}`
     } else {
         // cotizacion.innerText = `No cotizamos seguros para la marca ${marca}`
         // cotizacion.classList.add("colorRed")
