@@ -1,0 +1,262 @@
+[
+    {
+        "suit": "Az de Trebol",
+        "value": 1,
+        "img": "trebol-az"
+    },
+    {
+        "suit": "Dos de Trebol",
+        "value": 2,
+        "img": "trebol-dos"
+    },
+    {
+        "suit": "Tres de Trebol",
+        "value": 3,
+        "img": "trebol-tres"
+    },
+    {
+        "suit": "Cuatro de Trebol",
+        "value": 4,
+        "img": "trebol-cuatro"
+    },
+    {
+        "suit": "Cinco de Trebol",
+        "value": 5,
+        "img": "trebol-cinco"
+    },
+    {
+        "suit": "Seis de Trebol",
+        "value": 6,
+        "img": "trebol-seis"
+    },
+    {
+        "suit": "Siete de Trebol",
+        "value": 7,
+        "img": "trebol-siete"
+    },
+    {
+        "suit": "Ocho de Trebol",
+        "value": 8,
+        "img": "trebol-ocho"
+    },
+    {
+        "suit": "Nueve de Trebol",
+        "value": 9,
+        "img": "trebol-nueve"
+    },
+    {
+        "suit": "Diez de Trebol",
+        "value": 10,
+        "img": "trebol-diez"
+    },
+    {
+        "suit": "Jota de Trebol",
+        "value": 10,
+        "img": "trebol-jota"
+    },
+    {
+        "suit": "Dama de Trebol",
+        "value": 10,
+        "img": "trebol-dama"
+    },
+    {
+        "suit": "Rey de Trebol",
+        "value": 10,
+        "img": "trebol-rey"
+    },
+    {
+        "suit": "Az de Picas",
+        "value": 1,
+        "img": "picas-az"
+    },
+    {
+        "suit": "Dos de Picas",
+        "value": 2,
+        "img": "picas-dos"
+    },
+    {
+        "suit": "Tres de Picas",
+        "value": 3,
+        "img": "picas-tres"
+    },
+    {
+        "suit": "Cuatro de Picas",
+        "value": 4,
+        "img": "picas-cuatro"
+    },
+    {
+        "suit": "Cinco de Picas",
+        "value": 5,
+        "img": "picas-cinco"
+    },
+    {
+        "suit": "Seis de Picas",
+        "value": 6,
+        "img": "picas-seis"
+    },
+    {
+        "suit": "Siete de Picas",
+        "value": 7,
+        "img": "picas-siete"
+    },
+    {
+        "suit": "Ocho de Picas",
+        "value": 8,
+        "img": "picas-ocho"
+    },
+    {
+        "suit": "Nueve de Picas",
+        "value": 9,
+        "img": "picas-nueve"
+    },
+    {
+        "suit": "Diez de Picas",
+        "value": 10,
+        "img": "picas-diez"
+    },
+    {
+        "suit": "Jota de Picas",
+        "value": 10,
+        "img": "picas-jota"
+    },
+    {
+        "suit": "Dama de Picas",
+        "value": 10,
+        "img": "picas-dama"
+    },
+    {
+        "suit": "Rey de Picas",
+        "value": 10,
+        "img": "picas-rey"
+    },
+    {
+        "suit": "Az de Corazon",
+        "value": 1,
+        "img": "corazones-az"
+    },
+    {
+        "suit": "Dos de Corazon",
+        "value": 2,
+        "img": "corazones-dos"
+    },
+    {
+        "suit": "Tres de Corazon",
+        "value": 3,
+        "img": "corazones-tres"
+    },
+    {
+        "suit": "Cuatro de Corazon",
+        "value": 4,
+        "img": "corazones-cuatro"
+    },
+    {
+        "suit": "Cinco de Corazon",
+        "value": 5,
+        "img": "corazones-cinco"
+    },
+    {
+        "suit": "Seis de Corazon",
+        "value": 6,
+        "img": "corazones-seis"
+    },
+    {
+        "suit": "Siete de Corazon",
+        "value": 7,
+        "img": "corazones-siete"
+    },
+    {
+        "suit": "Ocho de Corazon",
+        "value": 8,
+        "img": "corazones-ocho"
+    },
+    {
+        "suit": "Nueve de Corazon",
+        "value": 9,
+        "img": "corazones-nueve"
+    },
+    {
+        "suit": "Diez de Corazon",
+        "value": 10,
+        "img": "corazones-diez"
+    },
+    {
+        "suit": "Jota de Corazon",
+        "value": 10,
+        "img": "corazones-jota"
+    },
+    {
+        "suit": "Dama de Corazon",
+        "value": 10,
+        "img": "corazones-dama"
+    },
+    {
+        "suit": "Rey de Corazon",
+        "value": 10,
+        "img": "corazones-rey"
+    },
+    {
+        "suit": "Az de Diamante",
+        "value": 1,
+        "img": "diamantes-az"
+    },
+    {
+        "suit": "Dos de Diamante",
+        "value": 2,
+        "img": "diamantes-dos"
+    },
+    {
+        "suit": "Tres de Diamante",
+        "value": 3,
+        "img": "diamantes-tres"
+    },
+    {
+        "suit": "Cuatro de Diamante",
+        "value": 4,
+        "img": "diamantes-cuatro"
+    },
+    {
+        "suit": "Cinco de Diamante",
+        "value": 5,
+        "img": "diamantes-cinco"
+    },
+    {
+        "suit": "Seis de Diamante",
+        "value": 6,
+        "img": "diamantes-seis"
+    },
+    {
+        "suit": "Siete de Diamante",
+        "value": 7,
+        "img": "diamantes-siete"
+    },
+    {
+        "suit": "Ocho de Diamante",
+        "value": 8,
+        "img": "diamantes-ocho"
+    },
+    {
+        "suit": "Nueve de Diamante",
+        "value": 9,
+        "img": "diamantes-nueve"
+    },
+    {
+        "suit": "Diez de Diamante",
+        "value": 10,
+        "img": "diamantes-diez"
+    },
+    {
+        "suit": "Jota de Diamante",
+        "value": 10,
+        "img": "diamantes-jota"
+    },
+    {
+        "suit": "Dama de Diamante",
+        "value": 10,
+        "img": "diamantes-dama"
+    },
+    {
+        "suit": "Rey de Diamante",
+        "value": 10,
+        "img": "diamantes-rey"
+    }
+]

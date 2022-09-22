@@ -4,36 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
-    <title>AJAX Y FETCH</title>
-=======
-    <title>Fetch</title>
->>>>>>> main
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>blackjack</title>
 </head>
 <body>
-    <h1 style="text-align: center">SEGUROS PATTACINI S.R.L.</h1>
-    <div class="botonesModos">
-        <button id="botonLightMode" class="btn btn-light">Modo claro</button>
-        <button id="botonDarkMode" class="btn btn-dark">Modo oscuro</button>
-    </div>
-    <div class="inputMarca">
-        <h2>Para cotizar el seguro de tu vehículo escribe la marca y presiona el botón.</h2>
-        <form id="marcaForm">
-            <!-- reemplazamos el input por una lista desplegable -->
-            <select name="marcas" id="formSelect">
-                <option selected>Seleccioná la marca de tu vehículo</option>
-            </select>
-            <button type="submit" class="btn btn-primary">Cotizar</button>
-        </form>
-    </div>
-    <div>
-        <h3 id="cotizacion"></h3>
-        <h3 id="divDolar"></h3>
-    </div>
-    <script src="script.js"></script>
-    <!-- alert 2 -->
+    <header>
+        <!-- logo con refresh -->
+        <div>
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo de blackjack">
+            </a>
+        </div>
+        <div>
+            <span id="userName"></span>
+            <img src="img/user.png" alt="logo de usuario">
+        </div>
+    </header>
+    <section>
+        <!-- pantalla de bienvenida y boton de play, cuando comienza se borra -->
+        <div id="pantallaBienvenida" class="bienvenida">
+            <h1>¡Bienvenido al Blackjack!</h1>
+            <button id="cargarPantalla">JUGAR</button>
+        </div>
+    </section>
+    <main id="main">
+        <div id="pantallaJuego" class="juego">
+            <!-- SALDO -->
+            <div class="saldo">
+                <p>Saldo: $<span id="saldoValue">10000</span></p>
+            </div>
+            <!-- APUESTA -->
+            <div class="apuesta">
+                <!-- DIV APUESTA E INMPUT -->
+                <div>
+                    <p>Apuesta: $<span id="apuestaValue">0</span></p>
+                </div>
+                <!-- DIV FICHAS -->
+                <div class="fichas">
+                    <img src="/img/ficha-cien.png" alt="ficha de cien" id="fichaDeCien">
+                    <img src="/img/ficha-quin.png" alt="ficha de quinientos" id="fichaDeQuin">
+                    <img src="/img/ficha-mil.png" alt="ficha de mil" id="fichaDeMil">
+                </div>
+                <!-- BOTON REPARTIR -->
+                <div id="botonRepartir">
+                    <p>REPARTIR</p>
+                </div>
+            </div>
+            <!-- CARTAS -->
+            <div class="cartasIniciales">
+                <div>
+                    <div id="cartasBanca">
+                        <div id="carta2"></div>
+                        <div id="carta4"></div>
+                    </div>
+                    <p id="conteoBanca" class="conteo"></p>
+                </div>
+                <div>
+                    <p id="conteoUser" class="conteo"></p>
+                    <div id="cartasUser">
+                        <div id="carta1"></div>
+                        <div id="carta3"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ESTRATEGIA -->
+            <div class="estrategia">
+                <a href="/img/basic-strategy.jpg" target="_blank">ESTRATEGIA BÁSICA</a>
+            </div>
+            <!-- ACCIONES -->
+            <div class="acciones">
+                <div id="botonPlantarse" class="botonesAcciones">
+                    <p>PLANTARSE</p>
+                </div>
+                <div id="botonPedir" class="botonesAcciones">
+                    <p>PEDIR</p>
+                </div>
+                <div id="botonDoblar" class="botonesAcciones">
+                    <P>DOBLAR</P>
+                </div>
+                <div id="botonDividir" class="botonesAcciones">
+                    <p>DIVIDIR</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- se resume la historia del bj -->
+    <section class="informacion">
+        <h2>Nociones de blackjack  </h2>
+        <p>
+            El blackjack es uno de los juegos más populares en el mundo de los casinos y, en parte, su fama se debe a la relativa simplicidad necesaria para jugarlo. De hecho, sigue las mismas reglas que las barajas tradicionales.                                                                         Es decir, para un buen desempeño en el juego, es necesario comprender la lógica de las cartas y tener habilidades matemáticas básicas para poder calcular bien las jugadas. El objetivo principal en el juego es vencer al crupier, también conocido como el representante de la casa (casino). De hecho, cada jugador se centrará en ese propósito, el de vencer al crupier, y no necesariamente en vencer a los demás.
+        </p>
+        <h2>¿Cómo jugar?</h2>
+        <p>
+            El crupier reparte dos cartas visibles a cada jugador. El valor del As es 11 o +1, las figuras valen 10, y las cartas numéricas su valor original. El valor del As puede cambiarse según la necesidad de no pasarse del número 21. Si a un jugador le sale un As junto con una carta de valor 10, obtiene blackjack automáticamente, ganando la apuesta salvo que el crupier obtenga también blackjack. Al terminar de repartir las dos primeras cartas a cada jugador, el crupier pondrá luego su primera carta boca arriba de manera que sea visible para el resto de jugadores, quienes podrán tomar sus decisiones en función de esa carta, mientras que el crupier tendrá una segunda carta boca abajo en espera de su turno. Cada jugador compite únicamente contra el crupier, siendo indiferente a las cartas que tengan el resto de los demás jugadores. <br><br>
+            Cada jugador tiene la posibilidad de plantarse y quedarse con cualquier puntuación, o de pedir más cartas hasta alcanzar los 21 puntos. Alcanzar los 21 puntos con más de una carta extra no se considera blackjack, siendo por tanto esa jugada inferior al blackjack con dos cartas. Si al pedir una nueva carta se pasa de 21, el jugador pierde automáticamente la partida y sus cartas y apuesta serán retiradas por el crupier. Cuando todos los jugadores hayan pedido sus cartas, el crupier mostrará su segunda carta boca abajo y sacará más cartas si fuera necesario hasta sumar 17 o más puntos para alcanzar el número 21, momento en el que se plantará. <br><br>
+            Entre el crupier y cada jugador, gana finalmente quién obtenga blackjack (As+10) o quien tenga la puntuación más alta sin pasarse de los 21 puntos, habiendo la posibilidad de empate y recuperar lo apostado.
+        </p>
+    </section>
+    <footer>
+        <span>Todos los derechos reservados.</span>
+        <span>Sitio creado por <a href="https://www.linkedin.com/in/santiagopattacini/" target="_blank">Santiago Pattacini</a></span>
+    </footer>
+    <!-- js -->
+    <script src="js/script.js"></script>
+    <!-- sewwtalert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

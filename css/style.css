@@ -1,0 +1,232 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Popppins', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+/* ============================================================================== */
+/* HEADER */
+header{
+    background-color: #2b3650;
+    height: 12vh;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header div img{
+    height: 9vh;
+}
+/* ============================================================================== */
+/* BIENVENIDA */
+/* Pantalla bienvenida y boton de play */
+.bienvenida{
+    display: none;
+    height: 88vh;
+    background-image: url("../img/bienvenida-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bienvenida h1{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: whitesmoke;
+    font-size: 65px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+.bienvenida button{
+    background-color: red;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.bienvenida button:hover{
+    cursor: pointer;
+}
+/* ============================================================================== */
+/* MAIN */
+#main{
+    height: 88vh;
+    display: none;
+}
+/* PANTALLA JUEGO */
+.juego{
+    height: 100%;
+    background-image: url("../img/juego-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "saldo cartas estrategia"
+                         "apuesta cartas acciones"
+                         "apuesta cartas acciones";
+}
+.saldo{
+    color: whitesmoke;
+    grid-area: saldo;
+    padding: 1rem 0 0 2rem;
+}
+.saldo p{
+    font-size: 40px;
+    font-weight: bold;
+}
+/* APUESTA */
+.apuesta{
+    grid-area: apuesta;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0 0 1rem 2rem;
+}
+
+.apuesta p{
+    font-size: 40px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+.apuesta img{
+    width: 6rem;
+}
+.apuesta img:hover{
+    cursor: pointer;
+}
+#botonRepartir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3e658;
+    border: 2px black solid;
+    width: 18rem;
+    height: 5rem;
+    border-radius: 1.5rem;
+}
+#botonRepartir:hover{
+    cursor: pointer;
+}
+#botonRepartir p{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* REPARTO DE CARTAS */
+.cartasIniciales{
+    grid-area: cartas; 
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.cartasIniciales div{
+    padding: auto;
+    display: inline-block;
+}
+
+.conteo{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.carta{
+    width: 6rem;
+    height: 9rem;
+}
+
+/* ESTRATEGIA */
+.estrategia{
+    grid-area: estrategia;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    padding: 1rem 1rem 0 0;
+}
+.estrategia a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: bold;
+}
+.estrategia a:hover{
+    text-decoration: underline;
+}
+/* DECISIONES */
+.acciones{
+    grid-area: acciones;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    padding: 0 1rem 0.75rem 0;
+}
+.botonesAcciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 8rem;
+    border-radius: 1.5rem;
+    background-color: #e3e658;
+    border: 1px black solid;
+    margin: 0.25rem 0 0.25rem 0;
+}
+.botonesAcciones:hover{
+    cursor: pointer;
+}
+.botonesAcciones p{
+    font-size: 15px;
+    font-weight: bold;
+}
+/* SECCION INFO */
+.informacion{
+    padding: 1rem 5rem 0.5rem 5rem;
+}
+.informacion h2{
+    font-size: 18;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.informacion p{
+    font-size: 14;
+    text-align: justify;
+    padding-bottom: 0.5rem;
+}
+
+/* FOOTER */
+footer{
+    height: 25px;
+    background-color: #2b3650;
+    color: whitesmoke;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+footer span a{
+    text-decoration: none;
+    color: whitesmoke
+}
+footer span a:hover {
+    color: whitesmoke;
+    text-decoration: underline;
+}
